@@ -25,8 +25,8 @@
         "Des-Azure"
     ],
     "icons": {
-        "default": "images/desa-logo.png",
-        "large": "images/desa-logo.png"
+        "default": "images/MDRLabs-trans-128x128.png",
+        "large": "images/MDRLabs-trans-256x256.png"
     },
     "files": [
         {

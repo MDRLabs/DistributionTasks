@@ -21,7 +21,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://cbsp-abnamro@dev.azure.com/cbsp-abnamro/DesA/_git/Abnamro.Desa.AzureDevOps.MaintainPipelines"
+    "url": "https://github.com/MDRLabs/DistributionTasks.git"
   },
   "dependencies": {
     "@types/jquery": "^2.0.51",
