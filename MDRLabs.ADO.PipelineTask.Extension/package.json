@@ -1,5 +1,5 @@
 {
-  "name": "Des-Azure-Pipeline-Resource-Distribution",
+  "name": "MDRLabs-Pipeline-Resource-Distribution",
   "version": "5.0.0",
   "description": "Add or update one or more Azure DevOps Task Groups, Variable Groups and Service Connections to one or more Azure DevOps Team Projects",
   "author": "",

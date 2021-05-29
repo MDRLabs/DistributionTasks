@@ -5,10 +5,10 @@ the Azure DevOps Extension for  Distributing Build and Release Pipeline resource
 
 ## Description
 
-[Build and Release Resource Distribution](./Azure.Desa.AzureDevOps.BuildReleaseTask.Extension/overview.md)
+[Build and Release Resource Distribution](./MDRLabs.ADO.PipelineTask.Extension/overview.md)
 
 ## Status Badge
-[![Build Status](https://dev.azure.com/cbsp-abnamro/DesA/_apis/build/status/Extensions/BuildPipeline-Ext-Distribute-Pipelines?branchName=master)](https://dev.azure.com/cbsp-abnamro/DesA/_build/latest?definitionId=1190&branchName=master)
+
 
 ## Link
 
@@ -23,7 +23,7 @@ the Azure DevOps Extension for  Distributing Build and Release Pipeline resource
 
 ## About Best Practices
 
-* [Best Practices and Guidelines](https://social.connect.abnamro.com/wikis/home?lang=en#!/wiki/W344bb2e0ca8e_46b7_8db1_29535dbec480/page/Guidelines%20%26%20Best%20Practices), specifically the Naming Conventions
-* [Azure DevOps Build Wiki](https://social.connect.abnamro.com/wikis/home?lang=en#!/wiki/W344bb2e0ca8e_46b7_8db1_29535dbec480/page/VSTS%20Build)
-* [Azure DevOps Wiki](https://social.connect.abnamro.com/wikis/home?lang=en#!/wiki/W344bb2e0ca8e_46b7_8db1_29535dbec480/page/Visual%20Studio%20Team%20Services)
-* [Microsoft Azure Development Community](https://social.connect.abnamro.com/communities/service/html/communitystart?communityUuid=e9f91631-e672-4478-a72c-ac0b22e2c282)
+* [Best Practices and Guidelines]()
+* [Azure DevOps Build Wiki]()
+* [Azure DevOps Wiki]()
+* [Microsoft Azure Development Community]()

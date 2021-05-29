@@ -147,7 +147,7 @@ While updating the access control list (ACL) of the team project *Contributor* g
 
 - Introduction
 
-  The following illustrations provide the steps to create a build pipeline based on various Des-Azure Distribution Tasks.
+  The following illustrations provide the steps to create a build pipeline based on various MDRLabs Distribution Tasks.
 
 - Installing Extension
 
@@ -185,7 +185,7 @@ While updating the access control list (ACL) of the team project *Contributor* g
 
 - Add Distribution Tasks
 
-  - Add the distribution tasks by clicking plus(+) button and search the task using keyword 'Distribution'. You will see three tasks to distribute i.e. Des-Azure _Variablegroup Distribution_, Des-Azure _Taskgroup Distribution_ and Des-Azure _Serviceconnection Distribution_. Select the appropriate distribution task in order to distribute within Azure team projects of your organization. It is advised to add the tasks in the following order:
+  - Add the distribution tasks by clicking plus(+) button and search the task using keyword 'Distribution'. You will see three tasks to distribute i.e. MDRLabs _Variablegroup Distribution_, MDRLabs _Taskgroup Distribution_ and MDRLabs _Serviceconnection Distribution_. Select the appropriate distribution task in order to distribute within Azure team projects of your organization. It is advised to add the tasks in the following order:
 
       1. Variablegroups
       1. ServiceConnections
@@ -232,7 +232,7 @@ While maintaining the extension history we have considered only major versions a
 
 ## Contributors
 
-Special thanks to our DES-Azure contributers team
+Special thanks to our MDRLabs contributers team
 
    1. [Michael Bentley](https://nl.linkedin.com/in/michaelrbentley)
    1. [Rohit Nadhe](https://www.linkedin.com/in/rohitnadhe)
