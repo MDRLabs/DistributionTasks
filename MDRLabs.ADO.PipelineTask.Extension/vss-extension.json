@@ -1,0 +1,113 @@
+{
+    "manifestVersion": 1,
+    "id": "DES-Azure-Distribution-Tasks",
+    "name": "DES Azure Distribution Tasks",
+    "publisher": "ABNAMRO-DES-AZURE",
+    "version": "12.0.9",
+    "public": true,
+    "galleryFlags": [
+        "Public"
+    ],    
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "description": "A set of Build and Release tasks to distribute one or more Taskgroups, variablegroups and service connections to one or more Azure DevOps Team Projects within the same organisation.",
+    "categories": [
+        "Azure Pipelines"
+    ],
+    "tags": [
+        "Azure",
+        "Build Pipelines",
+        "Release Pipelines",
+        "CI-CD",
+        "Des-Azure"
+    ],
+    "icons": {
+        "default": "images/desa-logo.png",
+        "large": "images/desa-logo.png"
+    },
+    "files": [
+        {
+            "path": "node_modules/vss-web-extension-sdk/lib",
+            "addressable": true,
+            "packagePath": "lib"
+        },
+        {
+            "path": "content",
+            "addressable": true,
+            "packagePath": "content"
+        },
+        {
+            "path": "ProductTasks/TaskgroupDistribution",
+            "packagePath": "TaskgroupDistribution"
+        },
+        {
+            "path": "ProductTasks/VariablegroupDistribution",
+            "packagePath": "VariablegroupDistribution"
+        },
+        {
+            "path": "ProductTasks/ServiceConnectionDistribution",
+            "packagePath": "ServiceConnectionDistribution"
+        }
+    ],
+    "contributions": [
+        {
+            "id": "DES-Azure-Distribution-Tasks",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "TaskgroupDistribution"
+            }
+        },
+        {
+            "id": "DES-Azure-Variablgroup-Distribution",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "VariablegroupDistribution"
+            }
+        },
+        {
+            "id": "DES-Azure-Serviceconnection-Distribution",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "ServiceConnectionDistribution"
+            }
+        }
+    ],
+    "branding": {
+        "color": "rgb(134,209,205)",
+        "theme": "light"
+    },
+    "content": {
+        "details": {
+            "path": "overview.md"
+        },
+        "price": {
+            "path": "pricing.md"
+        },
+        "license": {
+            "path": "license.md"
+        }
+    },
+    "links": {
+        "license": {
+            "uri": "https://marketplace.visualstudio.com/items/desazure/license"
+        },
+        "price": {
+            "uri": "https://marketplace.visualstudio.com/items/desazure/pricing"
+        },
+        "source": {
+            "uri": "https://github.com/csharpdocs/azure-devops-distribution-tasks-json-samples"
+        }
+    }
+}

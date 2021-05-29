@@ -1,0 +1,40 @@
+{
+  "name": "Des-Azure-Pipeline-Resource-Distribution",
+  "version": "5.0.0",
+  "description": "Add or update one or more Azure DevOps Task Groups, Variable Groups and Service Connections to one or more Azure DevOps Team Projects",
+  "author": "",
+  "keywords": [],
+  "license": "UNLICENSED",
+  "private": false,
+  "main": "index.js",
+  "engines": {
+    "node": ">=8.11"
+  },
+  "scripts": {
+    "precompile:tasks": "node scripts/copySharedFilesToProductTasks",
+    "clean": "rimraf ./dist && rimraf ./built && rimraf ./ProductTasks/**/Common && rimraf ./ProductTasks/**/ps_modules && rimraf ./ProductTasks/**/Modules && rimraf ./ProductTasks/**/bin",
+    "build:tasks": "npm run clean && npm run build:tasks:noclean",
+    "build:tasks:noclean": "npm run precompile:tasks && tsc -p .",
+    "extension:create": "tfx extension create --root . --output-path dist --manifest-globs vss-extension.json --publisher %Publisher% --rev-version",
+    "build:all": "npm run build:tasks && npm run extension:create",
+    "extension:publish": "tfx extension publish --root . --output-path dist --manifest-globs vss-extension.json --rev-version --token %npm_config_vsts_pat% --publisher %Publisher% --share-with %vstsaccount% --override \"{\\\"name\\\":\\\"DES Azure Distribute Pipeline Resources \"(\"%VSTSExtensionDeveloper%\")\\\"}\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://cbsp-abnamro@dev.azure.com/cbsp-abnamro/DesA/_git/Abnamro.Desa.AzureDevOps.MaintainPipelines"
+  },
+  "dependencies": {
+    "@types/jquery": "^2.0.51",
+    "@types/node": "^10.12.18",
+    "@types/q": "^1.5.1",
+    "azure-pipelines-task-lib": "^2.7.7",
+    "npm": "^6.9.0",
+    "vss-web-extension-sdk": "^5.141.0"
+  },
+  "devDependencies": {
+    "copyfiles": "^1.2.0",
+    "rimraf": "^2.5.4",
+    "tfx-cli": "^0.6.3",
+    "typescript": "^2.1.4"
+  }
+}
