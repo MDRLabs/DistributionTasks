@@ -1,12 +1,12 @@
 {
     "id": "2dd68b03-81e9-4951-9194-4c533a6ceca0",
-    "name": "DES-Azure-Serviceconnection-Distribution",
-    "friendlyName": "Des-Azure Serviceconnection Distribution",
+    "name": "MDRLabs-Serviceconnection-Distribution",
+    "friendlyName": "MDRLabs Serviceconnection Distribution",
     "description": "Distribute one or more Azure DevOps Service connections to one or more Azure DevOps Team Projects in Azure DevOps and Azure DevOps Server",
     "helpUrl": "https://docs.microsoft.com/en-us/azure/devops/extend/overview?toc=%2Fazure%2Fdevops%2Fextend%2Ftoc.json&bc=%2Fazure%2Fdevops%2Fextend%2Fbreadcrumb%2Ftoc.json&view=azure-devops",
     "helpMarkDown": "[More information](https://docs.microsoft.com/en-us/azure/devops/extend/overview?toc=%2Fazure%2Fdevops%2Fextend%2Ftoc.json&bc=%2Fazure%2Fdevops%2Fextend%2Fbreadcrumb%2Ftoc.json&view=azure-devops)",
     "category": "Azure Pipelines",
-    "author": "Developer enabling services for Azure(Des-Azure)",
+    "author": "MDRLabs",
     "version": {
         "Major": 3,
         "Minor": 0,

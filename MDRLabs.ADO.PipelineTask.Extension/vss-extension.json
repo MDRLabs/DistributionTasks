@@ -101,10 +101,10 @@
     },
     "links": {
         "license": {
-            "uri": "https://marketplace.visualstudio.com/items/desazure/license"
+            "uri": "https://marketplace.visualstudio.com/items/MDRLabs/license"
         },
         "price": {
-            "uri": "https://marketplace.visualstudio.com/items/desazure/pricing"
+            "uri": "https://marketplace.visualstudio.com/items/MDRLabs/pricing"
         },
         "source": {
             "uri": "https://github.com/csharpdocs/azure-devops-distribution-tasks-json-samples"

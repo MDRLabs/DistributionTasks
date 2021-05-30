@@ -1,12 +1,12 @@
 {
     "id": "3017ab6d-dedb-452d-b342-c3c3ccc9db40",
-    "name": "DES-Azure-Taskgroup-Distribution",
-    "friendlyName": "Des-Azure Taskgroup Distribution",
+    "name": "MDRLabs-Taskgroup-Distribution",
+    "friendlyName": "MDRLabs Taskgroup Distribution",
     "description": "Distribute one or more Azure DevOps Task Groups to one or more Azure DevOps Team Projects in Azure DevOps and Azure DevOps Server",
     "helpUrl": "https://docs.microsoft.com/en-us/azure/devops/extend/overview?toc=%2Fazure%2Fdevops%2Fextend%2Ftoc.json&bc=%2Fazure%2Fdevops%2Fextend%2Fbreadcrumb%2Ftoc.json&view=azure-devops",
     "helpMarkDown": "[More information](https://docs.microsoft.com/en-us/azure/devops/extend/overview?toc=%2Fazure%2Fdevops%2Fextend%2Ftoc.json&bc=%2Fazure%2Fdevops%2Fextend%2Fbreadcrumb%2Ftoc.json&view=azure-devops)",
     "category": "Azure Pipelines",
-    "author": "Developer enabling services for Azure (Des-Azure)",
+    "author": "MDRLabs",
     "version": {
         "Major": 8,
         "Minor": 0,

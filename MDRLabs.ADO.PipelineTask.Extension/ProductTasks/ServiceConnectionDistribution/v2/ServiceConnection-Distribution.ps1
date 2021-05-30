@@ -140,7 +140,7 @@ try {
     $FailedProjectCollection = @{}
     $SuccededProjectCollection = @{}
 
-    # Expects the DesAzure.PowerShell.Vsts.RestApi.Helper module to be imported.
+    # Expects the MDRLabs.PowerShell.Vsts.RestApi.Helper module to be imported.
     if (-not(Get-Module -name "MDRLabs.Ps.Ado.RestApi.HelperMDRLabs.ADORestApiHelper")) {
         $localmodules = Join-Path $ScriptFolder "Modules\MDRLabs.Ps.Ado.RestApi.HelperMDRLabs.ADORestApiHelper.psm1"
         import-module $localmodules -Force -NoClobber -Global -ErrorAction Stop

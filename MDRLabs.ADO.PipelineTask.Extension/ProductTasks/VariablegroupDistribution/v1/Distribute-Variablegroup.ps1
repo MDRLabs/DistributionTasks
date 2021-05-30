@@ -124,7 +124,7 @@ try {
     [System.Collections.Generic.List[string]]$ProjectExclusions = New-Object 'System.Collections.Generic.List[string]'
     [System.Collections.Generic.List[string]]$Files = New-Object 'System.Collections.Generic.List[string]'
 
-    # Expects the DesAzure.PowerShell.Vsts.RestApi.Helper module to be imported.
+    # Expects the MDRLabs.PowerShell.Vsts.RestApi.Helper module to be imported.
     if (-not(Get-Module -name "MDRLabs.Ps.Ado.RestApi.HelperMDRLabs.ADORestApiHelper")) {
         $localmodules = Join-Path $ScriptFolder "Modules\MDRLabs.Ps.Ado.RestApi.HelperMDRLabs.ADORestApiHelper.psm1"
         import-module $localmodules -Verbose -Force -NoClobber -Global -ErrorAction Stop
