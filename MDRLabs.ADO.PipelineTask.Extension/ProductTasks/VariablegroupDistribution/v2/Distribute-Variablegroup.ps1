@@ -131,12 +131,12 @@ try {
     $SuccededProjectCollection = @{}
 
     # Expects the DesAzure.PowerShell.Vsts.RestApi.Helper module to be imported.
-    if (-not(Get-Module -name "DesAzure.Ps.Azure.DevOps.RestApi.Helper")) {
-        $localmodules = Join-Path $ScriptFolder "Modules\DesAzure.Ps.Azure.DevOps.RestApi.Helper.psm1"
+    if (-not(Get-Module -name "MDRLabs.Ps.Ado.RestApi.HelperMDRLabs.ADORestApiHelper")) {
+        $localmodules = Join-Path $ScriptFolder "Modules\MDRLabs.Ps.Ado.RestApi.HelperMDRLabs.ADORestApiHelper.psm1"
         import-module $localmodules -Verbose -Force -NoClobber -Global -ErrorAction Stop
        
-        if ($null -eq (Get-Module -Name "DesAzure.Ps.Azure.DevOps.RestApi.Helper").Name) {
-            throw "Module DesAzure.Ps.Azure.DevOps.RestApi.Helper not loaded. Install-Module DesAzure.Ps.Azure.DevOps.RestApi.Helper and re-run"
+        if ($null -eq (Get-Module -Name "MDRLabs.Ps.Ado.RestApi.HelperMDRLabs.ADORestApiHelper").Name) {
+            throw "Module MDRLabs.Ps.Ado.RestApi.HelperMDRLabs.ADORestApiHelper not loaded. Install-Module MDRLabs.Ps.Ado.RestApi.HelperMDRLabs.ADORestApiHelper and re-run"
         }
     }
 

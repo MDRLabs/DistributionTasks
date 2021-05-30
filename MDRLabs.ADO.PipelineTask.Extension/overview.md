@@ -152,7 +152,7 @@ While updating the access control list (ACL) of the team project *Contributor* g
 - Installing Extension
 
   - Navigate to the [Visual Studio Marketplace](https://marketplace.visualstudio.com/azuredevops)
-  - Search for '_DES Azure Distribution Tasks_'
+  - Search for '_MDRLabs Distribution Tasks_'
   - Install the Azure DevOps Pipeline extension by choosing your organization
 
        ![Screenshot-6.png](content/Screenshot-6.png)
@@ -232,7 +232,7 @@ While maintaining the extension history we have considered only major versions a
 
 ## Contributors
 
-Special thanks to our MDRLabs contributers team
+Special thanks to our MDRLabs contributors team
 
    1. [Michael Bentley](https://nl.linkedin.com/in/michaelrbentley)
    1. [Rohit Nadhe](https://www.linkedin.com/in/rohitnadhe)

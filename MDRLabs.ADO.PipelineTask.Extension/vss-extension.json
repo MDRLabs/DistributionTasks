@@ -1,7 +1,7 @@
 {
     "manifestVersion": 1,
-    "id": "DES-Azure-Distribution-Tasks",
-    "name": "DES Azure Distribution Tasks",
+    "id": "MDRLabs-Distribution-Tasks",
+    "name": "MDRLabs Distribution Tasks",
     "publisher": "ABNAMRO-DES-AZURE",
     "version": "12.0.9",
     "public": true,
@@ -22,7 +22,7 @@
         "Build Pipelines",
         "Release Pipelines",
         "CI-CD",
-        "Des-Azure"
+        "MDRLabs"
     ],
     "icons": {
         "default": "images/MDRLabs-trans-128x128.png",
@@ -54,7 +54,7 @@
     ],
     "contributions": [
         {
-            "id": "DES-Azure-Distribution-Tasks",
+            "id": "MDRLabs-Distribution-Tasks",
             "type": "ms.vss-distributed-task.task",
             "targets": [
                 "ms.vss-distributed-task.tasks"
@@ -64,7 +64,7 @@
             }
         },
         {
-            "id": "DES-Azure-Variablgroup-Distribution",
+            "id": "MDRLabs-Variablgroup-Distribution",
             "type": "ms.vss-distributed-task.task",
             "targets": [
                 "ms.vss-distributed-task.tasks"
@@ -74,7 +74,7 @@
             }
         },
         {
-            "id": "DES-Azure-Serviceconnection-Distribution",
+            "id": "MDRLabs-Serviceconnection-Distribution",
             "type": "ms.vss-distributed-task.task",
             "targets": [
                 "ms.vss-distributed-task.tasks"
@@ -85,7 +85,7 @@
         }
     ],
     "branding": {
-        "color": "rgb(134,209,205)",
+        "color": "rgb(0,67,88)",
         "theme": "light"
     },
     "content": {

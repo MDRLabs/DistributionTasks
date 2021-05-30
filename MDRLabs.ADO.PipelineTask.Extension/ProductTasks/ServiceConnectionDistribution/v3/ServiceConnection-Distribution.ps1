@@ -159,11 +159,11 @@ try {
     $SuccededProjectCollection = @{}
 
     # Expects the DesAzure.PowerShell.Vsts.RestApi.Helper module to be imported.
-    if (-not(Get-Module -name "ADORestApiHelper")) {
-        $localmodules = Join-Path $ScriptFolder "Modules\ADORestApiHelper.psm1"
+    if (-not(Get-Module -name "MDRLabs.ADORestApiHelper")) {
+        $localmodules = Join-Path $ScriptFolder "Modules\MDRLabs.ADORestApiHelper.psm1"
         import-module $localmodules -Force -NoClobber -Global -ErrorAction Stop
-        if ($null -eq (Get-Module -Name "ADORestApiHelper").Name) {
-            throw "Module ADORestApiHelper not loaded. Install-Module ADORestApiHelper and re-run"
+        if ($null -eq (Get-Module -Name "MDRLabs.ADORestApiHelper").Name) {
+            throw "Module MDRLabs.ADORestApiHelper not loaded. Install-Module MDRLabs.ADORestApiHelper and re-run"
         }
     }
 

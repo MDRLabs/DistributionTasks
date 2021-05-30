@@ -24,6 +24,4 @@ the Azure DevOps Extension for  Distributing Build and Release Pipeline resource
 ## About Best Practices
 
 * [Best Practices and Guidelines]()
-* [Azure DevOps Build Wiki]()
-* [Azure DevOps Wiki]()
-* [Microsoft Azure Development Community]()
+* [Build Wiki]()
