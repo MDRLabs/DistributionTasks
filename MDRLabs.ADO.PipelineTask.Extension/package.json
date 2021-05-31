@@ -17,7 +17,7 @@
     "build:tasks:noclean": "npm run precompile:tasks && tsc -p .",
     "extension:create": "tfx extension create --root . --output-path dist --manifest-globs vss-extension.json --publisher %Publisher% --rev-version",
     "build:all": "npm run build:tasks && npm run extension:create",
-    "extension:publish": "tfx extension publish --root . --output-path dist --manifest-globs vss-extension.json --rev-version --token %npm_config_vsts_pat% --publisher %Publisher% --share-with %vstsaccount% --override \"{\\\"name\\\":\\\"DES Azure Distribute Pipeline Resources \"(\"%VSTSExtensionDeveloper%\")\\\"}\""
+    "extension:publish": "tfx extension publish --root . --output-path dist --manifest-globs vss-extension.json --rev-version --token %npm_config_ado_pat% --publisher %Publisher% --share-with %ADOAccount% --override \"{\\\"name\\\":\\\"MDRLabs Distribute Pipeline Resources \"(\"%ADOExtensionDeveloper%\")\\\"}\""
   },
   "repository": {
     "type": "git",
