@@ -1,5 +1,5 @@
 {
-    "id": "11dab887-a9f1-407a-8d94-98106bda63c1",
+    "id": "1db0cf0f-25cd-4066-bc6a-dceca3178398",
     "name": "MDRLabs-Variablgroup-Distribution",
     "friendlyName": "MDRLabs Variablegroup Distribution",
     "description": "Distribute one or more Azure DevOps Variable Groups to one or more Azure DevOps Team Projects in Azure DevOps and Azure DevOps Server",

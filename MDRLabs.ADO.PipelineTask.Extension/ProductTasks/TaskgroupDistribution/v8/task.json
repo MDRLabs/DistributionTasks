@@ -1,5 +1,5 @@
 {
-    "id": "3017ab6d-dedb-452d-b342-c3c3ccc9db40",
+    "id": "7c000b35-aa2b-44c8-a92c-25fa839eb040",
     "name": "MDRLabs-Taskgroup-Distribution",
     "friendlyName": "MDRLabs Taskgroup Distribution",
     "description": "Distribute one or more Azure DevOps Task Groups to one or more Azure DevOps Team Projects in Azure DevOps and Azure DevOps Server",

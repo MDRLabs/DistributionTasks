@@ -1,5 +1,5 @@
 {
-    "id": "2dd68b03-81e9-4951-9194-4c533a6ceca0",
+    "id": "a41aa78a-29dd-4ee5-9b51-08c5579600ac",
     "name": "MDRLabs-Serviceconnection-Distribution",
     "friendlyName": "MDRLabs Serviceconnection Distribution",
     "description": "Distribute one or more Azure DevOps Service connections to one or more Azure DevOps Team Projects in Azure DevOps and Azure DevOps Server",
