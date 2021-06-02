@@ -1,11 +1,11 @@
-$pat = 'your-pat-goes-here'
-$ADOAccount = 'your-organization-goes-here'
-$Publisher = 'your-publisher-id-goes-here'
-$ADOExtensionDeveloper = 'your-name-goes-here'
+$npm_cfg_ado_pat = 'your-pat-goes-here'
+$npm_cfg_ado_org = 'your-organization-goes-here'
+$npm_cfg_ado_ext_publisher = 'your-publisher-id-goes-here'
+$npm_cfg_ado_ext_developer = 'your-name-goes-here'
 $collectionuri = 'https://dev.azure.com/your-organization-goes-here/'
 
-[Environment]::SetEnvironmentVariable("npm_config_ado_pat", $pat, "User")
-[Environment]::SetEnvironmentVariable("ADOAccount", $ADOAccount, "User")
-[Environment]::SetEnvironmentVariable("Publisher", $Publisher, "User")
-[Environment]::SetEnvironmentVariable("ADOExtensionDeveloper", $ADOExtensionDeveloper, "User")
+[Environment]::SetEnvironmentVariable("npm_cfg_ado_pat", $npm_cfg_ado_pat, "User")
+[Environment]::SetEnvironmentVariable("npm_cfg_ado_org", $npm_cfg_ado_org, "User")
+[Environment]::SetEnvironmentVariable("npm_cfg_ado_ext_publisher", $npm_cfg_ado_ext_publisher, "User")
+[Environment]::SetEnvironmentVariable("npm_cfg_ado_ext_developer", $npm_cfg_ado_ext_developer, "User")
 [Environment]::SetEnvironmentVariable("SYSTEM_COLLECTIONURI", $collectionuri, "User")
