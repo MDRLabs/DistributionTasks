@@ -1,9 +1,9 @@
 {
     "manifestVersion": 1,
-    "id": "MDRLabs-Distribution-Tasks",
-    "name": "MDRLabs Distribution Tasks",
+    "id": "Distribution-Tasks",
+    "name": "Distribution Tasks",
     "publisher": "MDRLabs",
-    "version": "12.0.10",
+    "version": "12.0.11",
     "public": true,
     "galleryFlags": [
         "Public"
