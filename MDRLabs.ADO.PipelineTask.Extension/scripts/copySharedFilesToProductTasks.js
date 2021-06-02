@@ -63,7 +63,7 @@ function getProductTaskDirs() {
 }
 
 var productTaskDirs = getProductTaskDirs();
-var promisses = productTaskDirs.map(function(productTaskDir) {
+var promises = productTaskDirs.map(function(productTaskDir) {
     var deferred = Q.defer();
 
     console.log("Copying shared files to " + productTaskDir);
@@ -75,7 +75,7 @@ var promisses = productTaskDirs.map(function(productTaskDir) {
     return deferred.promise;
 });
 
-Q.all(promisses)
+Q.all(promises)
     .fail(function(err) {
         console.error(err);
         process.exit(1);

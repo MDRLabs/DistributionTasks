@@ -2,8 +2,8 @@
     "manifestVersion": 1,
     "id": "MDRLabs-Distribution-Tasks",
     "name": "MDRLabs Distribution Tasks",
-    "publisher": "ABNAMRO-DES-AZURE",
-    "version": "12.0.9",
+    "publisher": "MDRLabs",
+    "version": "12.0.10",
     "public": true,
     "galleryFlags": [
         "Public"
