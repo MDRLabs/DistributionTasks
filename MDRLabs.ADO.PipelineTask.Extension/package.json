@@ -15,9 +15,9 @@
     "clean": "rimraf ./dist && rimraf ./built && rimraf ./ProductTasks/**/Common && rimraf ./ProductTasks/**/ps_modules && rimraf ./ProductTasks/**/Modules && rimraf ./ProductTasks/**/bin",
     "build:tasks": "npm run clean && npm run build:tasks:noclean",
     "build:tasks:noclean": "npm run precompile:tasks && tsc -p .",
-    "extension:create": "tfx extension create --root . --output-path dist --manifest-globs vss-extension.json --publisher $npm_cfg_ado_ext_publisher --rev-version",
+    "extension:create": "tfx extension create --root . --output-path dist --manifest-globs vss-extension.json --publisher MDRLabs --rev-version",
     "build:all": "npm run build:tasks && npm run extension:create",
-    "extension:publish": "tfx extension publish --root . --output-path dist --manifest-globs vss-extension.json --rev-version --token $npm_cfg_ado_pat --publisher $npm_cfg_ado_ext_publisher --share-with $npm_cfg_ado_org --override \"{\\\"name\\\":\\\"MDRLabs Distribute Pipeline Resources \"(\"$npm_cfg_ado_ext_developer\")\\\"}\""
+    "extension:publish": "tfx extension publish --root . --output-path dist --manifest-globs vss-extension.json --rev-version --token $npm_cfg_ado_pat --publisher MDRLabs --share-with $npm_cfg_ado_org --override \"{\\\"name\\\":\\\"MDRLabs Distribute Pipeline Resources \"(\"$npm_cfg_ado_ext_developer\")\\\"}\""
   },
   "repository": {
     "type": "git",
