@@ -14,7 +14,6 @@ on:
 defaults:
   run:
     working-directory: MDRLabs.ADO.PipelineTask.Extension
-    verbose: true
 
 jobs:
   ci-workflow:
