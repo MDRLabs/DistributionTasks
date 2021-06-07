@@ -1,8 +1,9 @@
+# The Continuous Integration Workflow for the Distribution Tasks ADO Extension
+
 name: Distribution Tasks CI
 
 on:
-  # Trigger the workflow on push or pull request,
-  # but only for the main branch
+  # Trigger the workflow on push or pull request,  but only for the main branch
   push:
     branches:
       - main
