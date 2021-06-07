@@ -3,7 +3,7 @@
     "id": "Distribution-Tasks",
     "name": "Distribution Tasks",
     "publisher": "MDRLabs",
-    "version": "12.0.17",
+    "version": "12.0.18",
     "public": false,
     "galleryFlags": [
         "Private"
@@ -18,15 +18,14 @@
         "Azure Pipelines"
     ],
     "tags": [
-        "Azure",
-        "Build Pipelines",
-        "Release Pipelines",
+        "Azure DevOps",
+        "Classic Pipelines",
         "CI-CD",
         "MDRLabs"
     ],
     "icons": {
         "default": "images/MDRLabs-trans-128x128.png",
-        "large": "images/MDRLabs-trans-256x256.png"
+        "large": "images/MDRLabs-trans-512x512.png"
     },
     "files": [
         {
@@ -85,7 +84,7 @@
         }
     ],
     "branding": {
-        "color": "rgb(0,67,88)",
+        "color": "rgb(255,255,255)",
         "theme": "light"
     },
     "content": {

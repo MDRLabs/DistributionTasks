@@ -1,10 +1,22 @@
 # Azure Pipelines configuration that builds and packages the extension.
 # To learn more about Azure Pipelines: https://aka.ms/learn-azure-pipelines
 
+name: Distribution Tasks CI
+
+on:
+  # Trigger the workflow on push or pull request,
+  # but only for the main branch
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
 jobs:
 - job: Linux
   pool:
-    vmImage: 'ubuntu-16.04'
+    vmImage: 'ubuntu-latest'
   steps:
   - template: azure-pipelines-steps.yml
 
