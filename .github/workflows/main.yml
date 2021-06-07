@@ -11,6 +11,7 @@ on:
     branches:
       - main
 
+# All steps use these defaults
 defaults:
   run:
     working-directory: MDRLabs.ADO.PipelineTask.Extension
@@ -43,5 +44,5 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: DistributePipelines
-          path: dist/
+          path: ./dist/*
           if-no-files-found: error # 'error' 'warn' or 'ignore' are also available, defaults to `warn` 
