@@ -16,30 +16,29 @@ defaults:
     verbose: true
 
 jobs:
-- runs-on: ubuntu-latest
-    CI-Workflow:
-      name: CI Workflow for Distribution Tasks
-      runs-on: ubuntu-latest
-     steps:  
-       - name: Checkout Repository
-       - uses: actions/checkout@v2
+  ci-workflow:
+    name: CI Workflow for Distribution Tasks
+    runs-on: ubuntu-latest
+    steps:  
+      - name: Checkout Repository
+      - uses: actions/checkout@v2
 
-       - name: Install Node.js
-       - uses: actions/setup-node@v1
-           with:
-              node-version: 'latest'
+      - name: Install Node.js
+      - uses: actions/setup-node@v1
+          with:
+            node-version: 'latest'
 
-       - name: Install NPM Dependencies
-       - run: npm install
+      - name: Install NPM Dependencies
+      - run: npm install
 
-       - name: npm install latest tfx-cli
-       - run: npm install tfx-cli --prefix ./_tools
+      - name: npm install latest tfx-cli
+      - run: npm install tfx-cli --prefix ./_tools
 
-       - name: Build All
-       - run: npm run build:all
+      - name: Build All
+      - run: npm run build:all
 
-       - name: Package Extension
-       - uses: actions/upload-artifact@v2
+      - name: Package Extension
+      - uses: actions/upload-artifact@v2
           with:
           name: DistributePipelines
           path: MDRLabs.ADO.PipelineTask.Extension/dist/MDRLabs.ADO.PipelineTask.Extension-[0-9]+.[0-9]+.[0-9]+.vsix
