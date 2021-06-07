@@ -19,7 +19,8 @@ jobs:
   ci-workflow:
     name: CI Workflow for Distribution Tasks
     runs-on: ubuntu-latest
-    steps:  
+    steps:
+      
       - name: Checkout Repository
         uses: actions/checkout@v2
 
@@ -42,5 +43,5 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: DistributePipelines
-          path: ./dist/*
+          path: dist/*
           if-no-files-found: error # 'error' 'warn' or 'ignore' are also available, defaults to `warn` 
