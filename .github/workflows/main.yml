@@ -14,9 +14,7 @@ on:
       - main
 
 jobs:
-- job: Linux
-  pool:
-    vmImage: 'ubuntu-latest'
+- runs-on: ubuntu-latest
   steps:
   - template: workflow-steps.yml
 
