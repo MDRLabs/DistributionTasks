@@ -20,7 +20,7 @@ jobs:
     name: CI Workflow for Distribution Tasks
     runs-on: ubuntu-latest
     steps:
-      
+
       - name: Checkout Repository
         uses: actions/checkout@v2
 
@@ -31,17 +31,17 @@ jobs:
           check-latest: false
 
       - name: Install NPM Dependencies
-      - run: npm install
+        run: npm install
 
       - name: npm install latest tfx-cli
-      - run: npm install tfx-cli --prefix ./_tools
+        run: npm install tfx-cli --prefix ./_tools
 
       - name: Build All
-      - run: npm run build:all
+        run: npm run build:all
 
       - name: Package Extension
-      - uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v2
         with:
           name: DistributePipelines
-          path: dist/*
+          path: dist/
           if-no-files-found: error # 'error' 'warn' or 'ignore' are also available, defaults to `warn` 
