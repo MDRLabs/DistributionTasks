@@ -40,6 +40,7 @@ jobs:
 
       - name: Package Extension
       - uses: actions/upload-artifact@v2
-          with:
+        with:
           name: DistributePipelines
-          path: MDRLabs.ADO.PipelineTask.Extension/dist/MDRLabs.ADO.PipelineTask.Extension-[0-9]+.[0-9]+.[0-9]+.vsix
+          path: ./dist/*
+          if-no-files-found: error # 'error' 'warn' or 'ignore' are also available, defaults to `warn` 
