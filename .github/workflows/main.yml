@@ -43,9 +43,12 @@ jobs:
       - name: Build All
         run: npm run build:all
 
+      - name: Directory list
+        run: ls -al ; ls -al ./dist
+
       - name: Package Extension
         uses: actions/upload-artifact@v2
         with:
           name: DistributePipelines
-          path: $GITHUB_WORKSPACE/MDRLabs.ADO.PipelineTask.Extension/dist/
+          path: ./dist/*
           if-no-files-found: error # 'error' 'warn' or 'ignore' are also available, defaults to `warn` 
