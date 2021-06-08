@@ -84,7 +84,7 @@ jobs:
         uses: HaaLeo/publish-vscode-extension@v0
         with:
           extensionFile: dist\MDRLabs.Distribution-Tasks-12.0.19.vsix
-          registryUrl: https://marketplace.visualstudio.com
+          registryUrl: https://marketplace.visualstudio.com/azuredevops
           # publish-manifest-file: vss-extension.json
           pat: ${{ secrets.NPM_CFG_ADO_PAT }}
           packagePath: ''
