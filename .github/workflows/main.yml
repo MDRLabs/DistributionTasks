@@ -57,8 +57,8 @@ jobs:
         with:
           name: DistributePipelines
           path: |
-             ${{ github.workspace }}/${{env.working-dir}}/dist/**/*
-             vss-extension.json
+             ${{ github.workspace }}/${{env.working-dir}}/vss-extension.json
+             ${{ github.workspace }}/${{env.working-dir}}/dist/**/
           if-no-files-found: error # 'error' 'warn' or 'ignore' are also available, defaults to `warn` 
 
   cd-workflow: # 2nd Job
@@ -80,6 +80,11 @@ jobs:
           name: DistributePipelines
           if-no-files-found: error # 'error' 'warn' or 'ignore' are also available, defaults to `warn` 
 
+      # Directory Listing
+      - name: Directory Listing
+        run: dir ${{ github.workspace }}
+        shell: cmd 
+      
       # Publish extension to the Marketplace
       - name: Publish extension to Marketplace
         uses: cezarypiatek/VsixPublisherAction@0.2
