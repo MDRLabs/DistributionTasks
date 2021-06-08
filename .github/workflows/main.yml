@@ -61,31 +61,7 @@ jobs:
              ${{ github.workspace }}/${{env.working-dir}}/dist/**/
           if-no-files-found: error # 'error' 'warn' or 'ignore' are also available, defaults to `warn` 
 
-  cd-workflow: # 2nd Job
-    needs: ci-workflow
-    name: 'CD Workflow for Distribution Tasks'
-    runs-on: Windows-latest
-    if: success()
-
-    steps:
-      # Download extension from the artifacts repository to the current working directory
-      - name: Download artifact and unzip
-        uses: actions/download-artifact@v2
-        with:
-          name: DistributePipelines
-
-      # Directory Listing
-      - name: Directory Listing
-        run: dir /p/q ${{ github.workspace }}
-        shell: cmd 
-      
-      # Publish extension to the Marketplace
-      - name: Publish extension to Marketplace
-        uses: HaaLeo/publish-vscode-extension@v0
-        with:
-          extensionFile: dist\MDRLabs.Distribution-Tasks-12.0.19.vsix
-          registryUrl: https://marketplace.visualstudio.com/azuredevops
-          # publish-manifest-file: vss-extension.json
-          pat: ${{ secrets.NPM_CFG_ADO_PAT }}
-          packagePath: ''
-
+      # Publish Extension
+      - name: Publish Extension
+        run: npm run extension:publish
+        if: success()
