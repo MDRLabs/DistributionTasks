@@ -86,7 +86,7 @@ jobs:
       - name: Publish extension to Marketplace
         uses: cezarypiatek/VsixPublisherAction@0.2
         with:
-          extension-file: *.vsix
+          extension-file: ./**/*.vsix
           publish-manifest-file: vss-extension.json
           personal-access-code: ${{ secrets.NPM_CFG_ADO_PAT }}
 
