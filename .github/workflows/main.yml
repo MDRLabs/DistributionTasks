@@ -55,3 +55,12 @@ jobs:
           name: DistributePipelines
           path: ${{ github.workspace }}/${{env.working-dir}}/dist/**/*
           if-no-files-found: error # 'error' 'warn' or 'ignore' are also available, defaults to `warn` 
+
+      # Publish extension to the Marketplace
+      - name: Publish extension to Marketplace
+        uses: cezarypiatek/VsixPublisherAction@0.2
+        with:
+          extension-file: ${{ github.workspace }}/${{env.working-dir}}/dist/*.vsix
+          publish-manifest-file: vss-extension.json
+          personal-access-code: ${{ secrets.NPM_CFG_ADO_PAT }}
+
