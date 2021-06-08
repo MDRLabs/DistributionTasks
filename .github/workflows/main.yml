@@ -61,9 +61,9 @@ jobs:
 
   cd-workflow: # 2nd Job
     needs: ci-workflow
-    if: ${{ ci-workflow.status == 'success' }}
     name: 'CD Workflow for Distribution Tasks'
     runs-on: Windows-latest
+    if: success()
 
     # All steps use these defaults
     defaults:
