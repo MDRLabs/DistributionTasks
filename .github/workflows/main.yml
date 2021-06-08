@@ -13,8 +13,13 @@ on:
   pull_request:
     branches:
       - main
-
+  
 jobs:
+
+  # Run jobs sequentially (max-parallel = 1), i.e. first CI and then CD. By default jobs run in parallel (max-parallel = 2)
+  strategy:
+    max-parallel: 1
+
   ci-workflow: # 1st Job
     name: CI Workflow for Distribution Tasks
     runs-on: ubuntu-latest
