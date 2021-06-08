@@ -63,5 +63,8 @@ jobs:
 
       # Publish Extension
       - name: Publish Extension
+        env:
+          npm_cfg_ado_pat: ${{secret.NPM_CFG_ADO_PAT}}
+          npm_cfg_ado_org: MDRLabs
         run: npm run extension:publish
         if: success()
