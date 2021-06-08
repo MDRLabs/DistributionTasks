@@ -69,7 +69,7 @@ jobs:
 
     steps:
       # Download extension from the artifacts repository to the current working directory
-      - name: Package Extension
+      - name: Download artifact and unzip
         uses: actions/download-artifact@v2
         with:
           name: DistributePipelines
@@ -81,9 +81,10 @@ jobs:
       
       # Publish extension to the Marketplace
       - name: Publish extension to Marketplace
-        uses: cezarypiatek/VsixPublisherAction@0.2
+        uses: HaaLeo/publish-vscode-extension@v0
         with:
           extension-file: dist\MDRLabs.Distribution-Tasks-12.0.19.vsix
-          publish-manifest-file: vss-extension.json
-          personal-access-code: ${{ secrets.NPM_CFG_ADO_PAT }}
+          registryUrl: https://marketplace.visualstudio.com
+          # publish-manifest-file: vss-extension.json
+          pat: ${{ secrets.NPM_CFG_ADO_PAT }}
 
