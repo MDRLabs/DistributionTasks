@@ -78,12 +78,7 @@ jobs:
           name: DistributePipelines
           if-no-files-found: error # 'error' 'warn' or 'ignore' are also available, defaults to `warn` 
 
-      # List the files in the current working directory
-      - name: Display structure of downloaded files
-        run: DIR .
-        shell: cmd
-
-        # Publish extension to the Marketplace
+      # Publish extension to the Marketplace
       - name: Publish extension to Marketplace
         uses: cezarypiatek/VsixPublisherAction@0.2
         with:
