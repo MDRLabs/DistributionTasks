@@ -52,12 +52,12 @@ jobs:
       - name: Directory list
         run: ls -al ; ls -al ./dist
 
-      # ${{ github.workspace }}/${{env.working-dir}}/vss-extension.json
       - name: Package Extension
         uses: actions/upload-artifact@v2
         with:
           name: DistributePipelines
           path: |
+             ${{ github.workspace }}/${{env.working-dir}}/vss-extension.json
              ${{ github.workspace }}/${{env.working-dir}}/dist/**/
           if-no-files-found: error # 'error' 'warn' or 'ignore' are also available, defaults to `warn` 
 
@@ -87,4 +87,5 @@ jobs:
           registryUrl: https://marketplace.visualstudio.com
           # publish-manifest-file: vss-extension.json
           pat: ${{ secrets.NPM_CFG_ADO_PAT }}
+          packagePath: ''
 
