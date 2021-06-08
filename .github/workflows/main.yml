@@ -80,7 +80,7 @@ jobs:
 
       # List the files in the current working directory
       - name: Display structure of downloaded files
-        run: ls -alR
+        run: DIR
 
         # Publish extension to the Marketplace
       - name: Publish extension to Marketplace
