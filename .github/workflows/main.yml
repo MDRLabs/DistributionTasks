@@ -60,8 +60,8 @@ jobs:
           if-no-files-found: error # 'error' 'warn' or 'ignore' are also available, defaults to `warn` 
 
   cd-workflow: # 2nd Job
-    needs: [ci-workflow]
-    if: (jobs.ci-workflow.status == 'success')
+    needs: ci-workflow
+    if: ${{ jobs.ci-workflow.status == 'success' }}
     name: 'CD Workflow for Distribution Tasks'
     runs-on: Windows-latest
 
