@@ -15,8 +15,6 @@ on:
       - main
   
 # Run jobs sequentially (max-parallel = 1), i.e. first CI and then CD. By default jobs run in parallel (max-parallel = 2)
-strategy:
-  max-parallel: 1
 
 jobs:
 
@@ -62,20 +60,22 @@ jobs:
           if-no-files-found: error # 'error' 'warn' or 'ignore' are also available, defaults to `warn` 
 
   cd-workflow: # 2nd Job
-    name: CD Workflow for Distribution Tasks
-    runs-on: Windows-latest
+    needs: [ci-workflow]
+    if: (jobs.ci-workflow.status == 'success')
+      name: CD Workflow for Distribution Tasks
+      runs-on: Windows-latest
 
-    # All steps use these defaults
-    defaults:
-      run:
-        working-directory: ${{env.working-dir}}
+      # All steps use these defaults
+      defaults:
+        run:
+          working-directory: ${{env.working-dir}}
 
-    steps:
-      # Publish extension to the Marketplace
-      - name: Publish extension to Marketplace
-        uses: cezarypiatek/VsixPublisherAction@0.2
-        with:
-          extension-file: ${{ github.workspace }}/${{env.working-dir}}/dist/*.vsix
-          publish-manifest-file: vss-extension.json
-          personal-access-code: ${{ secrets.NPM_CFG_ADO_PAT }}
+      steps:
+        # Publish extension to the Marketplace
+        - name: Publish extension to Marketplace
+          uses: cezarypiatek/VsixPublisherAction@0.2
+          with:
+            extension-file: ${{ github.workspace }}/${{env.working-dir}}/dist/*.vsix
+            publish-manifest-file: vss-extension.json
+            personal-access-code: ${{ secrets.NPM_CFG_ADO_PAT }}
 
