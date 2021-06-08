@@ -67,22 +67,16 @@ jobs:
     runs-on: Windows-latest
     if: success()
 
-    # All steps use these defaults
-    defaults:
-      run:
-        working-directory: ${{env.working-dir}}
-
     steps:
       # Download extension from the artifacts repository to the current working directory
       - name: Package Extension
         uses: actions/download-artifact@v2
         with:
           name: DistributePipelines
-          if-no-files-found: error # 'error' 'warn' or 'ignore' are also available, defaults to `warn` 
 
       # Directory Listing
       - name: Directory Listing
-        run: dir ${{ github.workspace }}
+        run: dir /p/q ${{ github.workspace }}
         shell: cmd 
       
       # Publish extension to the Marketplace
