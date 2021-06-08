@@ -2,6 +2,9 @@
 
 name: Distribution Tasks CI
 
+env:
+  working-dir: MDRLabs.ADO.PipelineTask.Extension
+
 on:
   # Trigger the workflow on push or pull request,  but only for the main branch
   push:
@@ -14,7 +17,7 @@ on:
 # All steps use these defaults
 defaults:
   run:
-    working-directory: MDRLabs.ADO.PipelineTask.Extension
+    working-directory: ${{env.working-dir}}
 
 jobs:
   ci-workflow:
@@ -50,5 +53,5 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: DistributePipelines
-          path: ${{ github.workspace }}/dist/**/*
+          path: ${{ github.workspace }}/${{env.working-dir}}/dist/**/*
           if-no-files-found: error # 'error' 'warn' or 'ignore' are also available, defaults to `warn` 
