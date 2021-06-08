@@ -34,6 +34,9 @@ jobs:
       - name: Install NPM Dependencies
         run: npm install
 
+      - name: Fix Audit Issues (if any) # make conditional to speed up the build
+        run: npm audit fix
+
       - name: npm install latest tfx-cli
         run: npm install tfx-cli --prefix ./_tools
 
@@ -44,5 +47,5 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: DistributePipelines
-          path: ./dist/*
+          path: $GITHUB_WORKSPACE/MDRLabs.ADO.PipelineTask.Extension/dist/
           if-no-files-found: error # 'error' 'warn' or 'ignore' are also available, defaults to `warn` 
