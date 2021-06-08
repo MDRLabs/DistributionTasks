@@ -80,7 +80,8 @@ jobs:
 
       # List the files in the current working directory
       - name: Display structure of downloaded files
-        run: DIR
+        run: DIR .
+        shell: cmd
 
         # Publish extension to the Marketplace
       - name: Publish extension to Marketplace
