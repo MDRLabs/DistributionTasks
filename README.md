@@ -1,3 +1,5 @@
+[![Distribution Tasks CI](https://github.com/MDRLabs/DistributionTasks/actions/workflows/main.yml/badge.svg)](https://github.com/MDRLabs/DistributionTasks/actions/workflows/main.yml)
+
 # Synopsis
 
 This solution contains related PowerShell scripts for calling various Azure DevOps REST APIs. In addition it includes
