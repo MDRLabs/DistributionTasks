@@ -15,16 +15,16 @@ on:
       - main
 
 jobs:
-  # All steps use these defaults
-  defaults:
-    run:
-      working-directory: ${{env.working-dir}}
-
   ci-workflow:
     name: CI Workflow for Distribution Tasks
     runs-on: ubuntu-latest
-    steps:
 
+    # All steps use these defaults
+    defaults:
+      run:
+        working-directory: ${{env.working-dir}}
+
+    steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
