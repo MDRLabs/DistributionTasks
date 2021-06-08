@@ -19,7 +19,7 @@ on:
 jobs:
 
   ci-workflow: # 1st Job
-    name: CI Workflow for Distribution Tasks
+    name: 'CI Workflow for Distribution Tasks'
     runs-on: ubuntu-latest
 
     # All steps use these defaults
@@ -62,20 +62,20 @@ jobs:
   cd-workflow: # 2nd Job
     needs: [ci-workflow]
     if: (jobs.ci-workflow.status == 'success')
-      name: CD Workflow for Distribution Tasks
-      runs-on: Windows-latest
+    name: 'CD Workflow for Distribution Tasks'
+    runs-on: Windows-latest
 
-      # All steps use these defaults
-      defaults:
-        run:
-          working-directory: ${{env.working-dir}}
+    # All steps use these defaults
+    defaults:
+      run:
+        working-directory: ${{env.working-dir}}
 
-      steps:
-        # Publish extension to the Marketplace
-        - name: Publish extension to Marketplace
-          uses: cezarypiatek/VsixPublisherAction@0.2
-          with:
-            extension-file: ${{ github.workspace }}/${{env.working-dir}}/dist/*.vsix
-            publish-manifest-file: vss-extension.json
-            personal-access-code: ${{ secrets.NPM_CFG_ADO_PAT }}
+    steps:
+      # Publish extension to the Marketplace
+      - name: Publish extension to Marketplace
+        uses: cezarypiatek/VsixPublisherAction@0.2
+        with:
+          extension-file: ${{ github.workspace }}/${{env.working-dir}}/dist/*.vsix
+          publish-manifest-file: vss-extension.json
+          personal-access-code: ${{ secrets.NPM_CFG_ADO_PAT }}
 
