@@ -63,5 +63,5 @@ jobs:
 
       # Publish Extension
       - name: Publish Extension
-        run: npm run extension:publish -- --token ${{secrets.NPM_CFG_ADO_PAT}}
+        run: npm run extension:publish -- --token="${{secrets.NPM_CFG_ADO_PAT}}"
         if: success()
