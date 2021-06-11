@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "Distribution-Tasks",
     "name": "Distribution Tasks",
-    "publisher": "MDRLabs",
+    "publisher": "MDRLabs-test",
     "version": "12.0.22",
     "public": true,
     "galleryFlags": [
