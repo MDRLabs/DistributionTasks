@@ -4,7 +4,7 @@
     "name": "Distribution Tasks",
     "publisher": "MDRLabs",
     "version": "12.0.18",
-    "public": false,
+    "public": true,
     "galleryFlags": [
         "Private"
     ],    
