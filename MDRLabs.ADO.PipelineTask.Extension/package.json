@@ -17,7 +17,7 @@
     "build:tasks:noclean": "npm run precompile:tasks && tsc -p .",
     "extension:create": "tfx extension create --root . --output-path dist --manifest-globs vss-extension.json --publisher MDRLabs --rev-version",
     "build:all": "npm run build:tasks && npm run extension:create",
-    "extension:publish": "tfx extension publish --root . --manifest-globs vss-extension.json --auth-type pat --publisher MDRLabs --share-with MDRLabs"
+    "extension:publish": "tfx extension publish --root . --manifest-globs vss-extension.json --auth-type pat --publisher MDRLabs"
   },
   "repository": {
     "type": "git",
